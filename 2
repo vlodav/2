@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double x,y;
+	cout << "введите число х: ";
+	cin >> x;
+	if (x < 1)
+	{
+		x = pow(x, 3) + 0.2;
+		cout << "пошло ао ветви (z<1)"<<endl;
+	}
+	else if (x >= 1)
+	{
+		x = x + log(x);
+		cout << "пошло ао ветви (z>=1)" << endl;
+	}
+	y = pow(cos(pow(x, 2)), 3) + pow(sin(pow(x, 2)), 2);
+	cout << "y = " <<y << endl;
+	return 0;
+}
