@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double x, y, r;
+    cout << "Введите значение x: ";
+    cin >> x;
+    cout << "Введите значение y: ";
+    cin >> y;
+    cout << "Введите значение радиуса r: ";
+    cin >> r;
+
+    if (x >= 0 && y >= 0) {
+        if (x <= r && y <= r) {
+            cout << "Точка (" << x << ", " << y << ") находится в области" << endl;
+        }
+        else {
+            cout << "Точка (" << x << ", " << y << ") не находится в области" << endl;
+        }
+    }
+    else if (x >= 0 && y < 0) {
+        if (x <= r && abs(y) <= r) {
+            cout << "Точка (" << x << ", " << y << ") находится в области" << endl;
+        }
+        else {
+            cout << "Точка (" << x << ", " << y << ") не находится в области" << endl;
+        }
+    }
+    else {
+        cout << "Точка (" << x << ", " << y << ") не находится в области" << endl;
+    }
+
+    return 0;
+}
