@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double a, b, c;
+	cout << "введите число 1: ";
+	cin >> a;
+	cout << "введите число 2: ";
+	cin >> b;
+	cout << "введите число 3: ";
+	cin >> c;
+	cout << "максимальное: " << max({ a, b, c }) << endl;
+	cout << "минимальное: " << min({ a, b, c }) << endl;
+	cout << "сумма чисел: " << a + b + c << endl;
+	cout << "произведение чисел: " << a * b * c << endl;
+	cout << "среднее чисел: " << (a + b + c) / 3 << endl;
+	return 0;
+}
