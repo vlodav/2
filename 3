@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+double findY(double x) {
+    // Уравнение прямой: y = -0.5x - 3
+    double y = (x/-2)-3;
+    return y;
+}
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    double x,y;
+    cout << "Введите значение x: ";
+    cin >> x;
+    if (x <= 0 && x >= -10)
+    {
+        y = findY(x);
+    }
+    else if (x>=0&&x<=3)
+    {
+        y = sqrt(9 - pow(x, 2));
+    }
+    else if (x >= 3 && x <= 6)
+    {
+       y = sqrt(9 - pow(-x + 6, 2));
+    }
+    cout << "Значение y для x = " << x << ": " << y <<endl;
+
+    return 0;
+}
